@@ -19,7 +19,7 @@
     ],
     "require": {
         "jms/serializer-bundle": "^1.0",
-        "justblackbird/jms-serializer-strict-json": "dev-master",
+        "justblackbird/jms-serializer-strict-json": "^0.1.0",
         "symfony/config": "^2.7|^3.0",
         "symfony/dependency-injection": "^2.7|^3.0",
         "symfony/yaml": "^2.7|^3.0"
@@ -29,12 +29,6 @@
         "squizlabs/php_codesniffer": "^2.8",
         "matthiasnoback/symfony-dependency-injection-test": "^1.1"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/JustBlackBird/jms-serializer-strict-json"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "JustBlackBird\\JmsSerializerStrictJsonBundle\\": "src"
