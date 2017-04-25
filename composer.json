@@ -8,6 +8,7 @@
         "json",
         "symfony"
     ],
+    "version": "0.1.0",
     "homepage": "https://github.com/JustBlackBird/jms-serializer-strict-json-bundle",
     "license": "Apache2",
     "authors": [
