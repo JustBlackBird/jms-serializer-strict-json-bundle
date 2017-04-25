@@ -1,0 +1,50 @@
+{
+    "name": "justblackbird/jms-serializer-strict-json-bundle",
+    "type": "library",
+    "description": "Symfony integration for JMS Serializer strict JSON deserializer",
+    "keywords": [
+        "jms",
+        "serializer",
+        "json",
+        "symfony"
+    ],
+    "homepage": "https://github.com/JustBlackBird/jms-serializer-strict-json-bundle",
+    "license": "Apache2",
+    "authors": [
+        {
+            "name": "Dmitriy Simushev",
+            "email": "simushevds@gmail.com"
+        }
+    ],
+    "require": {
+        "jms/serializer-bundle": "^1.0",
+        "justblackbird/jms-serializer-strict-json": "dev-master",
+        "symfony/config": "^2.7|^3.0",
+        "symfony/dependency-injection": "^2.7|^3.0",
+        "symfony/yaml": "^2.7|^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.6",
+        "squizlabs/php_codesniffer": "^2.8",
+        "matthiasnoback/symfony-dependency-injection-test": "^1.1"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/JustBlackBird/jms-serializer-strict-json"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JustBlackBird\\JmsSerializerStrictJsonBundle\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JustBlackBird\\JmsSerializerStrictJsonBundle\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": ["phpunit", "phpcs"]
+    }
+}
