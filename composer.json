@@ -8,7 +8,7 @@
         "json",
         "symfony"
     ],
-    "version": "0.1.0",
+    "version": "0.2.0",
     "homepage": "https://github.com/JustBlackBird/jms-serializer-strict-json-bundle",
     "license": "Apache2",
     "authors": [
@@ -19,7 +19,7 @@
     ],
     "require": {
         "jms/serializer-bundle": "^1.0",
-        "justblackbird/jms-serializer-strict-json": "^0.1.0",
+        "justblackbird/jms-serializer-strict-json": "^0.2.0",
         "symfony/dependency-injection": "^2.7|^3.0"
     },
     "require-dev": {
