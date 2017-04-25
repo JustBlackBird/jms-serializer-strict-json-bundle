@@ -17,8 +17,18 @@
 
 namespace JustBlackBird\JmsSerializerStrictJsonBundle;
 
+use JustBlackBird\JmsSerializerStrictJsonBundle\DependencyInjection\StrictJsonCompilerPass;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class JustBlackBirdJmsSerializerStrictJsonBundle extends Bundle
 {
+    /**
+     * {@inheritdoc}
+     */
+    public function build(ContainerBuilder $container)
+    {
+        parent::build($container);
+
+        $container->addCompilerPass(new StrictJsonCompilerPass());
+    }
 }

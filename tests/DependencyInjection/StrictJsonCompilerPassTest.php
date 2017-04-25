@@ -17,29 +17,29 @@
 
 namespace JustBlackBird\JmsSerializerStrictJsonBundle\Tests\DependencyInjection;
 
-use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
+use JustBlackBird\JmsSerializerStrictJsonBundle\DependencyInjection\StrictJsonCompilerPass;
 use JustBlackBird\JmsSerializerStrictJson\StrictJsonDeserializationVisitor;
-use JustBlackBird\JmsSerializerStrictJsonBundle\DependencyInjection\JmsSerializerStrictJsonExtension;
+use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractCompilerPassTestCase;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class JmsSerializerStrictJsonExtensionTest extends AbstractExtensionTestCase
+class StrictJsonCompilerPassTest extends AbstractCompilerPassTestCase
 {
+    protected function registerCompilerPass(ContainerBuilder $container)
+    {
+        $container->addCompilerPass(new StrictJsonCompilerPass());
+    }
+
     public function testOverridingSerializerParams()
     {
-        $this->load();
+        $this->setParameter(
+            'jms_serializer.json_deserialization_visitor.class',
+            'JMS\Serializer\JsonDeserializationVisitor'
+        );
+        $this->compile();
 
         $this->assertContainerBuilderHasParameter(
             'jms_serializer.json_deserialization_visitor.class',
             StrictJsonDeserializationVisitor::class
         );
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function getContainerExtensions()
-    {
-        return [
-            new JmsSerializerStrictJsonExtension()
-        ];
     }
 }

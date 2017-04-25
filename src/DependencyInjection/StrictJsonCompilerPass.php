@@ -17,27 +17,20 @@
 
 namespace JustBlackBird\JmsSerializerStrictJsonBundle\DependencyInjection;
 
-use Symfony\Component\Config\FileLocator;
+use JustBlackBird\JmsSerializerStrictJson\StrictJsonDeserializationVisitor;
+use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
-use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
-class JmsSerializerStrictJsonExtension extends Extension
+class StrictJsonCompilerPass implements CompilerPassInterface
 {
     /**
      * {@inheritdoc}
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function process(ContainerBuilder $container)
     {
-        $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
-        $loader->load('services.yml');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getAlias()
-    {
-        return 'justblackbird_jms_serializer_strict_json';
+        $container->setParameter(
+            'jms_serializer.json_deserialization_visitor.class',
+            StrictJsonDeserializationVisitor::class
+        );
     }
 }

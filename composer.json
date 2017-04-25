@@ -20,9 +20,7 @@
     "require": {
         "jms/serializer-bundle": "^1.0",
         "justblackbird/jms-serializer-strict-json": "^0.1.0",
-        "symfony/config": "^2.7|^3.0",
-        "symfony/dependency-injection": "^2.7|^3.0",
-        "symfony/yaml": "^2.7|^3.0"
+        "symfony/dependency-injection": "^2.7|^3.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.6",

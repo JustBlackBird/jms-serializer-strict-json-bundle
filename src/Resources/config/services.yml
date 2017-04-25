@@ -1,2 +1,0 @@
-parameters:
-    jms_serializer.json_deserialization_visitor.class: "JustBlackBird\\JmsSerializerStrictJson\\StrictJsonDeserializationVisitor"
