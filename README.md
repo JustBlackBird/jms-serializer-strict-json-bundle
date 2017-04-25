@@ -1,4 +1,4 @@
-# JMS Serializer Strict JSON Bundle
+# JMS Serializer Strict JSON Bundle [![Build Status](https://travis-ci.org/JustBlackBird/jms-serializer-strict-json-bundle.svg)](https://travis-ci.org/JustBlackBird/jms-serializer-strict-json-bundle)
 
 > Symfony integration for [JustBlackBird\JmsSerializerStrictJson](https://github.com/JustBlackBird/jms-serializer-strict-json)
 
