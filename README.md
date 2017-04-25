@@ -1,6 +1,6 @@
 # JMS Serializer Strict JSON Bundle
 
-> Symfony integration for (JustBlackBird\JmsSerializerStrictJson)[https://github.com/JustBlackBird/jms-serializer-strict-json]
+> Symfony integration for [JustBlackBird\JmsSerializerStrictJson](https://github.com/JustBlackBird/jms-serializer-strict-json)
 
 ## Installation
 
